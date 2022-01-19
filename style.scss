@@ -1,0 +1,146 @@
+$soft-blue: hsl(215, 51%, 70%);
+$cyan: hsl(178, 100%, 50%);
+$cyan-overlay: hsla(178, 100%, 50%, 0.5);
+$main-BG: hsl(217, 54%, 11%);
+$card-BG: hsl(216, 50%, 16%);
+$line: hsl(215, 32%, 27%);
+$white: hsl(0, 0%, 100%);
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background-color: $main-BG;
+  color: $white;
+  font-family: "Outfit", sans-serif;
+  font-size: 14px;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+main {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  background-color: $card-BG;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  max-width: 300px;
+  margin: 10px;
+  gap: 20px;
+}
+.product-image {
+  position: relative;
+  display: flex;
+  img {
+    border-radius: 10px;
+    width: 100%;
+  }
+}
+.view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $cyan-overlay;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.5s;
+  img {
+    width: auto;
+  }
+  &:hover {
+    opacity: 1;
+  }
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.title {
+  font-weight: 600;
+  font-size: 20px;
+  transition: color 0.5s;
+  &,
+  &:link,
+  &:visited {
+    color: $white;
+    text-decoration: none;
+  }
+  &:hover,
+  &:active {
+    color: $cyan;
+  }
+}
+.desc {
+  font-size: 18px;
+  font-weight: 300;
+  color: $soft-blue;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+.price,
+.time {
+  display: inline-flex;
+  justify-content: baseline;
+  img {
+    margin-right: 5px;
+  }
+}
+.price {
+  color: $cyan;
+}
+.time {
+  color: $soft-blue;
+}
+.author {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid $line;
+  color: $soft-blue;
+  white-space: pre;
+  img {
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  a {
+    transition: color 0.5s;
+    &,
+    &:link,
+    &:visited {
+      color: $white;
+      text-decoration: none;
+    }
+    &:hover,
+    &:active {
+      color: $cyan;
+    }
+  }
+  padding-top: 15px;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(178, 100%, 50%);
+}
