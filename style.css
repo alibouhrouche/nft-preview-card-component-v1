@@ -37,16 +37,16 @@ main {
   gap: 20px;
 }
 
-.product-image {
+.card-image {
   position: relative;
   display: flex;
 }
-.product-image img {
+.card-image img {
   border-radius: 10px;
   width: 100%;
 }
 
-.view {
+.card-view {
   position: absolute;
   top: 0;
   left: 0;
@@ -59,64 +59,67 @@ main {
   border-radius: 10px;
   opacity: 0;
   transition: opacity 0.5s;
+  cursor: pointer;
 }
-.view img {
+.card-view img {
   width: auto;
 }
-.view:hover {
+.card-view:hover {
   opacity: 1;
 }
 
-.content {
+.card-content {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-.title {
+.card-title {
   font-weight: 600;
   font-size: 20px;
   transition: color 0.5s;
+  margin: 0;
+  cursor: pointer;
 }
-.title, .title:link, .title:visited {
+.card-title a, .card-title a:link, .card-title a:visited {
   color: white;
   text-decoration: none;
 }
-.title:hover, .title:active {
+.card-title a:hover, .card-title a:active {
   color: #00fff7;
 }
 
-.desc {
+.card-desc {
   font-size: 18px;
   font-weight: 300;
   color: #8bacda;
 }
 
-.info {
+.card-info {
   display: flex;
   justify-content: space-between;
   padding: 5px 0;
 }
 
-.price,
-.time {
+.card-price,
+.card-time {
   display: inline-flex;
   justify-content: baseline;
 }
-.price img,
-.time img {
+.card-price img,
+.card-time img {
   margin-right: 5px;
 }
 
-.price {
+.card-price {
   color: #00fff7;
 }
 
-.time {
+.card-time {
   color: #8bacda;
 }
 
-.author {
+.card-author {
   display: flex;
   align-items: center;
   border-top: 1px solid #2f415b;
@@ -124,19 +127,19 @@ main {
   white-space: pre;
   padding-top: 15px;
 }
-.author img {
+.card-author img {
   border: 1px solid white;
   border-radius: 50%;
   margin-right: 10px;
 }
-.author a {
+.card-author a {
   transition: color 0.5s;
 }
-.author a, .author a:link, .author a:visited {
+.card-author a, .card-author a:link, .card-author a:visited {
   color: white;
   text-decoration: none;
 }
-.author a:hover, .author a:active {
+.card-author a:hover, .card-author a:active {
   color: #00fff7;
 }
 
